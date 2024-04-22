@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,8 +31,23 @@ namespace Checklist_checker
         {
             if (checkListItems != null)
             {
+                string position;
+                position = checkListItems[0].Position;
+                Label labelPos1 = new Label();
+                labelPos1.Text = position;
+                labelPos1.Font = new Font(labelPos1.Font.FontFamily, 12);
+                flowLayoutPanelChecklist.Controls.Add(labelPos1);
+
                 foreach (var item in checkListItems)
                 {
+                    if (item.Position != position)
+                    {
+                        Label label = new Label();
+                        position = item.Position;
+                        label.Text = position;
+                        label.Font = new Font(labelPos1.Font.FontFamily, 12);
+                        flowLayoutPanelChecklist.Controls.Add(label);
+                    }
                     CheckBox checkBox = new CheckBox();
                     checkBox.Text = item.Text;
                     checkBox.Checked = item.IsChecked;
