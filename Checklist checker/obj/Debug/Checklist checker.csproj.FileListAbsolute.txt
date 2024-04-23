@@ -10,15 +10,3 @@ C:\Users\kimer\OneDrive - USN\Kim\Master\Semester 8\Software Engineering\Assignm
 C:\Users\kimer\OneDrive - USN\Kim\Master\Semester 8\Software Engineering\Assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.pdb
 C:\Users\kimer\OneDrive - USN\Kim\Master\Semester 8\Software Engineering\Assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist_checker.FrmLogin.resources
 C:\Users\kimer\OneDrive - USN\Kim\Master\Semester 8\Software Engineering\Assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist_checker.FrmCheckList.resources
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\bin\Debug\Checklist checker.exe.config
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\bin\Debug\Checklist checker.exe
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\bin\Debug\Checklist checker.pdb
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.csproj.AssemblyReference.cache
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist_checker.FrmCheckList.resources
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist_checker.FrmSelector.resources
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist_checker.FrmLogin.resources
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist_checker.Properties.Resources.resources
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.csproj.GenerateResource.cache
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.csproj.CoreCompileInputs.cache
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.exe
-C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.pdb
