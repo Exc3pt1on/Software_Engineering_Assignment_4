@@ -31,37 +31,144 @@ namespace Checklist_checker
         {
             if (checkListItems != null)
             {
-                string position;
-                position = checkListItems[0].Position;
-                Label labelPos1 = new Label();
-                labelPos1.Text = position;
-                labelPos1.Font = new Font(labelPos1.Font.FontFamily, 12);
-                flowLayoutPanelChecklist.Controls.Add(labelPos1);
+                string position = checkListItems[0].Position;
+                string positionCountString = checkListItems[0].Position;
+                int positionCount = 0;
+                int index = 0;
 
                 foreach (var item in checkListItems)
                 {
-                    if (item.Position != position)
+                    if (item.Position != positionCountString)
                     {
-                        Label label = new Label();
-                        position = item.Position;
-                        label.Text = position;
-                        label.Font = new Font(labelPos1.Font.FontFamily, 12);
-                        flowLayoutPanelChecklist.Controls.Add(label);
+                        positionCount++;
+                        positionCountString = item.Position;
                     }
-                    CheckBox checkBox = new CheckBox();
-                    checkBox.Text = item.Text;
-                    checkBox.Checked = item.IsChecked;
-                    checkBox.AutoSize = true;
-
-                    // Add event handler for check state changed
-                    checkBox.CheckedChanged += (sender, e) =>
-                    {
-                        // Update checklist item state
-                        item.IsChecked = checkBox.Checked;
-                    };
-
-                    flowLayoutPanelChecklist.Controls.Add(checkBox);
                 }
+
+                for (int i = 0; i <= positionCount; i++)
+                {
+                    if (index < checkListItems.Count())
+                    {
+                        Panel panel = new Panel();
+                        //panel.AutoSize = true;
+                        panel.BorderStyle = BorderStyle.FixedSingle;
+                        panel.BackColor = Color.LightGray;
+                        panel.Height = 825;
+
+                        Label label = new Label();
+                        position = checkListItems[index].Position;
+                        label.AutoSize = true;
+                        label.Text = position;
+                        label.Font = new Font(label.Font.FontFamily, 12);
+                        label.Padding = new Padding(5);
+
+                        panel.Controls.Add(label);
+
+                        //Add checkboxes to panel
+                        int cboBottom = label.Bottom;
+                        int cboLeft = 0;
+                        int panelWidthCount = 1;
+                        int maxCboWidth = 0;
+
+                        while (checkListItems[index].Position == position)
+                        {
+                            CheckBox checkBox = new CheckBox();
+                            checkBox.Text = checkListItems[index].Text;
+                            checkBox.Checked = checkListItems[index].IsChecked;
+                            checkBox.AutoSize = true;
+                            checkBox.Padding = new Padding(5);
+
+                            if (checkBox.Width > maxCboWidth)
+                            {
+                                maxCboWidth = checkBox.Width;
+                            }
+
+                            if (cboBottom > 800)
+                            {
+                                cboBottom = label.Bottom;
+                                cboLeft += checkBox.Width;
+                                panelWidthCount++;
+                            }
+                            checkBox.Location = new Point(cboLeft, cboBottom);
+                            cboBottom = checkBox.Bottom;
+
+                            // Add event handler for check state changed
+                            int currentIndex_local = index;
+                            checkBox.CheckedChanged += (sender, e) =>
+                            {
+                                // Update checklist item state
+                                checkListItems[currentIndex_local].IsChecked = checkBox.Checked;
+                            };
+                            panel.Width = panelWidthCount * maxCboWidth;
+                            panel.Width = Math.Max(panel.Width, label.Width);
+                            panel.Controls.Add(checkBox);
+                            index++;
+                            if (index == checkListItems.Count()) { break; }
+
+                        }
+
+                        //add panel to flowLayout
+                        flowLayoutPanelChecklist.Controls.Add(panel);
+                    }
+
+
+                }
+
+                flowLayoutPanelChecklist.AutoSize = true;
+                flowLayoutPanelChecklist.FlowDirection = FlowDirection.LeftToRight;
+            }
+        }
+
+        private void PopulateChecklistOld()
+        {
+            string position = checkListItems[0].Position;
+
+            Panel panel1 = new Panel();
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.AutoSize = true;
+
+            Label labelPos1 = new Label();
+            labelPos1.Text = position;
+            labelPos1.Font = new Font(labelPos1.Font.FontFamily, 12);
+            panel1.Controls.Add(labelPos1);
+
+            CheckBox checkBox1 = new CheckBox();
+            checkBox1.Text = checkListItems[0].Text;
+            checkBox1.Checked = checkListItems[0].IsChecked;
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(0, labelPos1.Height);
+            panel1.Controls.Add(checkBox1);
+
+            flowLayoutPanelChecklist.Controls.Add(panel1);
+            MessageBox.Show("label posistion: " + labelPos1.Location + " checkbox position: " + checkBox1.Location);
+
+            foreach (var item in checkListItems)
+            {
+                if (item.Position != position)
+                {
+                    Panel panel = new Panel();
+                    panel.BorderStyle = BorderStyle.FixedSingle;
+
+                    Label label = new Label();
+                    position = item.Position;
+                    label.Text = position;
+                    label.Font = new Font(label.Font.FontFamily, 12);
+
+                    flowLayoutPanelChecklist.Controls.Add(label);
+                }
+                CheckBox checkBox = new CheckBox();
+                checkBox.Text = item.Text;
+                checkBox.Checked = item.IsChecked;
+                checkBox.AutoSize = true;
+
+                // Add event handler for check state changed
+                checkBox.CheckedChanged += (sender, e) =>
+                {
+                    // Update checklist item state
+                    item.IsChecked = checkBox.Checked;
+                };
+
+                flowLayoutPanelChecklist.Controls.Add(checkBox);
             }
         }
 
@@ -92,6 +199,13 @@ namespace Checklist_checker
         {
             string connectionString = ConfigurationManager.ConnectionStrings["IIT"].ConnectionString;
 
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string sign;
+            sign = txtSign.Text;
+            MessageBox.Show("Takk " +sign+"\nDin sjekkliste har blitt lagret");
         }
     }
 }
