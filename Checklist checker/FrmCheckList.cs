@@ -47,7 +47,6 @@ namespace Checklist_checker
                     flowLayoutPanelChecklist.Controls.Add(checkBox);
                 }
             }
-
         }
 
         private void GetCsvData()
