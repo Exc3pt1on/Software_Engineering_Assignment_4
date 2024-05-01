@@ -22,3 +22,4 @@ C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engi
 C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.csproj.CoreCompileInputs.cache
 C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.exe
 C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist checker.pdb
+C:\Users\kimer\OneDrive - USN\Kim\Semester 8\Software\assignment 4\Software_Engineering_Assignment_4\Checklist checker\obj\Debug\Checklist_checker.FrmAdmin.resources

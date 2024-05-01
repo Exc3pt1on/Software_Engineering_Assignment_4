@@ -42,8 +42,17 @@ namespace Checklist_checker
         {
             string employeeNr;
             employeeNr = txtEmployeeNr.Text;
-            FrmSelector selector = new FrmSelector(employeeNr);
-            selector.ShowDialog();
+            if (employeeNr == "A177568")
+            {
+                FrmAdmin admin = new FrmAdmin(employeeNr);
+                admin.ShowDialog();
+            }
+            else
+            {
+                FrmSelector selector = new FrmSelector(employeeNr);
+                selector.ShowDialog();
+            }
+
         }
     }
 }

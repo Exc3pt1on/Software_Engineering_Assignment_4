@@ -39,6 +39,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblEmployeeNr = new System.Windows.Forms.Label();
+            this.tabAdmin = new System.Windows.Forms.TabPage();
             this.TabContSelect.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             this.TabContSelect.Controls.Add(this.tabPage1);
             this.TabContSelect.Controls.Add(this.tabPage2);
             this.TabContSelect.Controls.Add(this.tabPage3);
+            this.TabContSelect.Controls.Add(this.tabAdmin);
             this.TabContSelect.Location = new System.Drawing.Point(42, 73);
             this.TabContSelect.Margin = new System.Windows.Forms.Padding(2);
             this.TabContSelect.Name = "TabContSelect";
@@ -168,6 +170,16 @@
             this.lblEmployeeNr.TabIndex = 2;
             this.lblEmployeeNr.Text = "Ansattnummer";
             // 
+            // tabAdmin
+            // 
+            this.tabAdmin.Location = new System.Drawing.Point(4, 22);
+            this.tabAdmin.Name = "tabAdmin";
+            this.tabAdmin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAdmin.Size = new System.Drawing.Size(512, 257);
+            this.tabAdmin.TabIndex = 3;
+            this.tabAdmin.Text = "Administrator";
+            this.tabAdmin.UseVisualStyleBackColor = true;
+            // 
             // FrmSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +211,7 @@
         private System.Windows.Forms.Button btnCar2;
         private System.Windows.Forms.Button btnCar1;
         private System.Windows.Forms.Label lblEmployeeNr;
+        private System.Windows.Forms.TabPage tabAdmin;
     }
 }
 
