@@ -69,6 +69,7 @@ namespace Checklist_checker
                         int cboLeft = 0;
                         int panelWidthCount = 1;
                         int maxCboWidth = 0;
+                        
 
                         while (checkListItems[index].Position == position)
                         {
@@ -78,9 +79,12 @@ namespace Checklist_checker
                             checkBox.AutoSize = true;
                             checkBox.Padding = new Padding(5);
 
-                            if (checkBox.Width > maxCboWidth)
+                            Size size = TextRenderer.MeasureText(checkBox.Text, checkBox.Font);
+                            int currentWidth = size.Width + checkBox.Padding.Horizontal;
+
+                            if (currentWidth > maxCboWidth)
                             {
-                                maxCboWidth = checkBox.Width;
+                                maxCboWidth = currentWidth + 30;
                             }
 
                             if (cboBottom > 800)
